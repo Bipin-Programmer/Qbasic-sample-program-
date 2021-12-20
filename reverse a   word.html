@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palidrome of word</title>
+    <style>
+        .tap1 {
+            margin: 0;
+            color: black;
+            transform: translateX(1cm);
+        }
+
+        .code-container {
+            -webkit-border-bottom-right-radius: 10px;
+            -webkit-border-bottom-left-radius: 10px;
+            -moz-border-radius-bottomright: 10px;
+            -moz-border-radius-bottomleft: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background: bisque;
+            padding: 10px;
+            color: black;
+            display: flex;
+            font-size: 1.5em;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .caption {
+            margin-bottom: 0;
+            -webkit-border-top-left-radius: 10px;
+            -webkit-border-top-right-radius: 10px;
+            -moz-border-radius-topleft: 10px;
+            -moz-border-radius-topright: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background: azure;
+            padding: 10px;
+            height: auto;
+            width: 100wh;
+            font-size: 2em;
+            letter-spacing: 10px;
+            text-align: center;
+        }
+
+        .tap2 {
+            margin: 0;
+            color: black;
+            transform: translateX(2cm);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Program to reverse a given word</h1>
+
+    <h2 class="caption">Simple</h2>
+    <div class="code-container">
+        <code>
+            REM Write a progam to reverse a number <br>
+            CLS <br>
+            INPUT "Enter any word"; w$ <br>
+            l = LEN(w$) <br>
+            FOR i = l TO 1 STEP -1 <br>
+            <p class="tap1">
+                c$ = MID$(w$, i, 1) <br>
+                t$ = t$ + c$ <br>
+            </p>
+            NEXT i <br>
+            PRINT "Reverse of given word is "; t$ <br>
+            END
+        </code>
+    </div>
+
+
+    <h2 class="caption">Using sub</h2>
+    <div class="code-container">
+        <code>
+            REM Write a progam to revese a word usign sub <br>
+            DECLARE SUB REV() <br>
+            CLS <br>
+            CALL REV <br>
+            END <br>
+            SUB REV <br>
+            <p class="tap1">
+                INPUT "Enter any word"; w$ <br>
+                l = LEN(w$) <br>
+                FOR i = l TO 1 STEP -1 <br> 
+                   &nbsp; &nbsp; c$ = MID$(w$, i, 1) <br>
+                   &nbsp; &nbsp; t$ = t$ + c$ <br>
+                NEXT i <br>
+                PRINT "Reverse of given word is "; t$
+            </p>
+            END SUB
+        </code>
+    </div>
+
+
+    <h2 class="caption">Using Function</h2>
+    <div class="code-container">
+        <code>
+            REM Write a progam to reverse a number using function <br>
+            DECLARE FUNCTION rev$(w$) <br>
+            CLS <br>
+            INPUT "Enter any word"; w$ <br>
+            PRINT "Reverse of given word "; rev$(w$) <br>
+            END <br>
+            FUNCTION rev$ (w$) <br>
+            <p class="tap1">
+                l = LEN(w$) <br>
+                FOR i = l TO 1 STEP -1 <br>
+                &nbsp; &nbsp;    c$ = MID$(w$, i, 1) <br>
+                &nbsp; &nbsp;   t$ = t$ + c$ <br>
+                NEXT i <br>
+               rev$ = t$
+            </p>
+            END FUNCTION <br>
+        </code>
+    </div>
+</body>
+
+</html>

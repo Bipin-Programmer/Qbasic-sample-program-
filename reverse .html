@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a number</title>
+    <style>
+        .tap1 {
+            margin: 0;
+            color: black;
+            ;
+            transform: translateX(0.5cm);
+        }
+
+        .code-container {
+            -webkit-border-bottom-right-radius: 10px;
+            -webkit-border-bottom-left-radius: 10px;
+            -moz-border-radius-bottomright: 10px;
+            -moz-border-radius-bottomleft: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background: bisque;
+            padding: 10px;
+            color: black;
+            display: flex;
+            font-size: 1.5em;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .caption {
+            margin-bottom: 0;
+            -webkit-border-top-left-radius: 10px;
+            -webkit-border-top-right-radius: 10px;
+            -moz-border-radius-topleft: 10px;
+            -moz-border-radius-topright: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background: azure;
+            padding: 10px;
+            height: auto;
+            width: 100wh;
+            font-size: 2em;
+            letter-spacing: 10px;
+            text-align: center;
+        }
+
+        .tap2 {
+            margin: 0;
+            color: black;
+            ;
+            transform: translateX(1cm);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Program to reverse a number</h1>
+
+    <h2 class="caption">Simple</h2>
+    <div class="code-container">
+        <code>
+            REM Write a progam to reverse a number
+                CLS <br>
+                INPUT " Enter any number"; n <br>
+                WHILE n <> 0 <br>
+                 <p class="tap1">  
+                    r = n MOD 10 <br>
+                    t = t * 10 + r <br>
+                    n = n \ 10 <br>
+                </p>
+                WEND <br>
+                PRINT "Reverse of given number is"; t <br>
+                END
+
+        </code>
+    </div>
+
+
+    <h2 class="caption">Using sub</h2>
+    <div class="code-container">
+        <code>
+            REM Write a progam to reverse a number  using sub Procedure
+            DECLARE SUB rev <br>
+            CALL rev <br>
+            END <br>
+            SUB rev <br>
+              <p class="tap1">
+                CLS <br>
+                INPUT " Enter any number"; n <br>
+                WHILE n <> 0 <br>
+                    <p class="tap2">
+                        r = n MOD 10 <br>
+                        t = t * 10 + r <br>
+                        n  = n \ 10 <br>
+                    </p>
+                WEND <br>
+                PRINT "Revrese of given number is"; t <br>
+              </p>
+            END SUB
+        </code>
+    </div>
+
+
+    <h2 class="caption">Using Function</h2>
+    <div class="code-container">
+        <code>
+REM program to reverse a number using funtion procedure<br>
+DECLARE FUNCTION REV() <br>
+CLS <br>
+INPUT "Enter any number"; n <br>
+PRINT "Reverse of given number is"; REV(n) <br>
+END <br>
+FUNCTION REV (n) <br>
+WHILE n <> 0
+    <p style="white-space: pre; margin: 0; padding: 0;">
+       r = n MOD 10
+        t = t * 10 + r
+        n = n \ 10
+    WEND
+    REV = t
+    </p>
+END FUNCTION
+
+
+        </code>
+    </div>
+</body>
+
+</html>
